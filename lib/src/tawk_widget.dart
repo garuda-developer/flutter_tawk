@@ -38,6 +38,7 @@ class Tawk extends StatefulWidget {
 
 class _TawkState extends State<Tawk> {
   late WebViewController _controller;
+  final _cookieManager = CookieManager();
   bool _isLoading = true;
 
   void _setUser(TawkVisitor visitor) {
@@ -68,7 +69,8 @@ class _TawkState extends State<Tawk> {
         WebView(
           initialUrl: widget.directChatLink,
           javascriptMode: JavascriptMode.unrestricted,
-          onWebViewCreated: (WebViewController webViewController) {
+          onWebViewCreated: (WebViewController webViewController) async{
+            await _cookieManager.clearCookies();
             setState(() {
               _controller = webViewController;
             });

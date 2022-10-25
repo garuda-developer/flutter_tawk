@@ -1,0 +1,10 @@
+/pubspec.lock
+/.flutter-plugins-dependencies
+/.flutter-plugins
+/.idea/
+/example/pubspec.lock
+/example/.flutter-plugins-dependencies
+/example/.flutter-plugins
+/example/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java
+/.dart_tool/
+/example/.dart_tool/
